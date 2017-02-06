@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+   
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+    body {
+     font-family: 'Open Sans', sans-serif;
+   
+    }
+
+    a {
+    color: #c0392b;
+   
+    }
+
+  .navbar-default .navbar-brand {
+    color: rgba(179, 68, 68, 1);
+}
+.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+.navbar-default {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: rgba(0, 150, 136, 1);
+   
+}
+.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 150, 136, 1);
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(25, 160, 148, 1);
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(25, 160, 148, 1);
+}
+.navbar-default .navbar-toggle {
+    border-color: #19a094;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #19a094;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #19a094;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #009688;
+}
+
+        </style>
+</head>
+<body>
+       
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <img class="pull-left" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Prince_of_Songkla_University_Emblem.png" style="width:30px; margin-right:10px; margin-top:5px" />
+                    @Html.ActionLink("Student Booking System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="margin-top:15px">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Room", "Index", "Roomadds")</li>
+                    <li>@Html.ActionLink("Student", "Index", "Students")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
